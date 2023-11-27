@@ -1,0 +1,65 @@
+Objective:
+The aim of this project was to analyze and predict customer churn for a fictional telecommunications company using machine learning techniques. The dataset, obtained from Kaggle, contains nineteen columns representing various customer characteristics, with the 'Churn' column indicating whether a customer left the company in the last month.
+
+Steps of the Project:
+
+Data Reading:
+
+Loaded the dataset into a Pandas dataframe.
+Explored the structure of the data, identifying 19 independent variables.
+Exploratory Data Analysis and Data Cleaning:
+
+Checked for missing values and identified an issue with the 'TotalCharges' column.
+Addressed missing values and removed contradictory entries with tenure=0.
+Removed the 'customerID' column as it was deemed irrelevant.
+Standardized payment method denominations.
+
+Data Visualization:
+
+Utilized normalized stacked bar plots and histograms for analyzing the influence of each independent variable on churn.
+Conclusions drawn from demographic, customer account, and services attributes.
+
+Feature Importance:
+
+Calculated mutual information scores to identify relevant predictor variables.
+Removed variables with low scores (gender, PhoneService, MultipleLines).
+
+Feature Engineering:
+
+Applied label encoding to binary variables.
+Utilized one-hot encoding for categorical variables.
+Normalized numeric columns using the min-max method.
+
+Setting a Baseline:
+
+Established a baseline using the rate of customers not churning as a simple classifier.
+Splitting the Data in Training and Testing Sets:
+
+Divided the dataset into training and testing sets for model evaluation.
+
+Assessing Multiple Algorithms:
+
+Evaluated six different algorithms, including K Nearest Neighbours, Logistic Regression, SVM, Random Forest, and Gradient Boosting.
+Selected Gradient Boosting as it outperformed others with an accuracy close to 80%.
+
+Algorithm Selected: Gradient Boosting:
+
+Explained the concept of Gradient Boosting.
+Implemented a Gradient Boosting Classifier with default hyperparameters.
+
+Hyperparameter Tuning:
+
+Conducted random search cross-validation to find optimal hyperparameters.
+Identified best hyperparameters: {'n_estimators': 90, 'min_samples_split': 3, 'max_features': 'log2', 'max_depth': 3}.
+
+Performance of the Model:
+
+Evaluated model performance using confusion matrix and key evaluation metrics.
+Achieved a sensitivity of 0.55 and specificity of 0.88, with an accuracy of approximately 80%.
+
+Drawing Conclusions - Summary:
+
+Summarized the key findings and steps of the machine learning analysis.
+Highlighted the iterative nature of machine learning projects and the importance of hyperparameter tuning.
+Conclusion:
+This comprehensive analysis provides insights into customer churn for the fictional telecommunications company, offering a foundation for informed decision-making and targeted customer retention strategies. The Gradient Boosting model, with optimized hyperparameters, demonstrates promising accuracy in predicting churn. Further refinements and explorations can be pursued to enhance the model's performance in real-world scenarios.
